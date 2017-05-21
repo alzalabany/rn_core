@@ -1,12 +1,10 @@
 import User from './auth/model';
-import Nav from './Navigation/model';
 import Blog from './Blog/model';
 import Visit from './visits/model';
 import Room from './room/model';
 
 const reducers = [
   User,
-  Nav,
   Blog,
   Room,
   Visit,
@@ -15,7 +13,6 @@ const reducers = [
 const initialState = Object.assign(
                                    {},
                                    User.initial,
-                                   Nav.initial,
                                    Blog.initial,
                                    Visit.initial,
                                    Room.initial,

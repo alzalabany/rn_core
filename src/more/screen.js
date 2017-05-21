@@ -157,7 +157,7 @@ class Blog extends Component {
                                         <Text style={[styles.label,{flex:1,fontSize:12,textAlign:'left'}]}>{item.code}</Text>
                                       </View>
                                       <View style={{margin:0,overflow:'hidden',borderRightWidth:1,borderColor:'purple',padding:10,width:100}}>
-                                        <Text style={[styles.label,{flex:1,fontSize:12,textAlign:'left'}]}>{item.name||'any one'}</Text>
+                                        <Text style={[styles.label,{flex:1,fontSize:12,textAlign:'left'}]}>{item.name||'-'}</Text>
                                       </View>
                                       <View style={{borderRightWidth:1,margin:0,overflow:'hidden',flex:1,justifyContent:'center',alignItems:'center'}}>
                                         <Button color="red" onPress={()=>this.delete(item)} title="delete" />
