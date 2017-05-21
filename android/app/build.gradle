@@ -83,12 +83,15 @@ def enableSeparateBuildPerCPUArchitecture = false
 def enableProguardInReleaseBuilds = false
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.1"
+    compileSdkVersion 25
+    buildToolsVersion "25.0.1"
 
     defaultConfig {
         applicationId "com.ivf"
         minSdkVersion 16
+        manifestPlaceholders = [onesignal_app_id: "62bd74e1-d1c5-4657-bf5a-6c885c89f30b",
+                                onesignal_google_project_number: "REMOTE"]
+        
         targetSdkVersion 22
         versionCode 1
         versionName "1.0"
@@ -126,6 +129,10 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-vector-icons')
+    compile project(':react-native-social-auth')
+    compile project(':react-native-onesignal')
+    compile project(':react-native-navigation')
     compile fileTree(dir: "libs", include: ["*.jar"])
     compile "com.android.support:appcompat-v7:23.0.1"
     compile "com.facebook.react:react-native:+"  // From node_modules
